@@ -27,8 +27,8 @@ class MailopostDriver implements DriverInterface
 
     public function validate(SettingsRepositoryInterface $settings, Factory $validator): MessageBag
     {
-        $validator->make($settings->all(), [
-            'mailopost_api_base_url' => 'required|regex:^((http|https):\/\/)?(www.)?(?!.*(ftp|http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+((\/)[\w#]+)*(\/\w+\?[a-zA-Z0-9_]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?\/?$',
+        return $validator->make($settings->all(), [
+            'mailopost_api_base_url' => 'required',
             'mailopost_token' => 'required',
             'mailopost_payment' => 'required|in:subscriber_priority,credit_priority,subscriber,credit',
         ])->errors();

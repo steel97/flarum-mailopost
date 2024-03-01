@@ -16,7 +16,7 @@ use FoF\Upload\Extenders\LoadFilesRelationship;
 
 return [
     
-    (new Extend\Mail())->driver(MailopostDriver::class)
+    (new Extend\Mail())->driver('mailopost', MailopostDriver::class)
         
         
     

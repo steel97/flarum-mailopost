@@ -49,10 +49,11 @@ class MailopostTransport implements Swift_Transport
                 'POST',
                 $this->endpoint.'messages',
                 [
-                    headers => [
+                    'headers' => [
                         'Authorization' => 'Bearer '.$this->token,
+                        'Content-Type' => 'application/json'
                     ],
-                    body => $this->payload($message, $to)
+                    'body' => json_encode($this->payload($message, $to))
                 ]
             );
         } catch (GuzzleException $e) {
@@ -95,10 +96,10 @@ class MailopostTransport implements Swift_Transport
     {
         return [
             'from_email' => $this->getReversePath($message),
-            'from_name' => 'noreply',
+            'from_name' => $message->getSender() ?? 'noreply',
             'to' => $to,
             'subject' => $message->getSubject(),
-            'html' => $message->bodyToString(),
+            'text' => $message->getBody(),
             'payment' => $this->payment
         ];
     }
