@@ -94,9 +94,6 @@ class MailopostTransport implements Swift_Transport
 
     private function payload(Swift_Mime_SimpleMessage $message, $to)
     {
-        echo '<pre>';
-        var_dump($to);
-        echo '</pre>';
         return [
             'from_email' => $this->getReversePath($message),
             'from_name' => $message->getSender() ?? 'noreply',
