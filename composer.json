@@ -24,11 +24,11 @@
     "extra": {
         "flarum-extension": {
             "title": "Flarum Mailopost",
-            "category": "",
+            "category": "feature",
             "icon": {
-                "name": "",
-                "color": "",
-                "backgroundColor": ""
+                "name": "fas fa-envelope",
+                "color": "#fff",
+                "backgroundColor": "rgb(212, 59, 47)"
             }
         },
         "flarum-cli": {

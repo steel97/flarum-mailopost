@@ -15,7 +15,7 @@ use Flarum\Extend;
 use FoF\Upload\Extenders\LoadFilesRelationship;
 
 return [
-    
+    new Extend\Locales(__DIR__.'/locale'),
     (new Extend\Mail())->driver('mailopost', MailopostDriver::class)
         
         

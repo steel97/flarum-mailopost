@@ -1,0 +1,7 @@
+core:
+  admin:
+    email:
+      mailopost_heading: Mailopost configuration
+      mailopost_api_base_url_label: API address (https://api.mailopost.ru/v1/email/)
+      mailopost_token_label: API authorization key
+      mailopost_payment_label: Payment type
