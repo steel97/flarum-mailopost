@@ -23,7 +23,7 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Flarum Mailopost",
+            "title": "Mailopost",
             "category": "feature",
             "icon": {
                 "name": "fas fa-envelope",
@@ -38,7 +38,7 @@
                 "js": false,
                 "jsCommon": false,
                 "css": false,
-                "locale": false,
+                "locale": true,
                 "gitConf": true,
                 "githubActions": false,
                 "prettier": false,
