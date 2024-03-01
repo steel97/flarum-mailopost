@@ -95,12 +95,6 @@ class MailopostTransport implements Swift_Transport
     private function payload(Swift_Mime_SimpleMessage $message, $to)
     {
         echo '<pre>';
-        var_dump($message);
-        echo '</pre>';
-        echo '<pre>';
-        var_dump($to);
-        echo '</pre>';
-        echo '<pre>';
         var_dump($to);
         echo '</pre>';
         return [
@@ -116,7 +110,8 @@ class MailopostTransport implements Swift_Transport
     private function getTo(Swift_Mime_SimpleMessage $message)
     {
         return collect($this->allContacts($message))->map(function ($display, $address) {
-            return $display ? $display." <{$address}>" : $address;
+            //return $display ? $display." <{$address}>" : $address;
+            return $address;
         })->values()->implode(',');
     }
 
