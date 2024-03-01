@@ -1,0 +1,55 @@
+{
+    "name": "steel97/flarum-mailopost",
+    "description": "Flarum mailopost mail driver",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "authors": [
+        {
+            "name": "Ivan Yv",
+            "email": "ivan.yurkov@steel-team.net",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Steel97\\FlarumMailopost\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Flarum Mailopost",
+            "category": "",
+            "icon": {
+                "name": "",
+                "color": "",
+                "backgroundColor": ""
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": false,
+                "js": false,
+                "jsCommon": false,
+                "css": false,
+                "locale": false,
+                "gitConf": true,
+                "githubActions": false,
+                "prettier": false,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": false
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
